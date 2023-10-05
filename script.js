@@ -38,7 +38,7 @@ function generatePassword() {
   var specialChar;
 
   passwordLength = 0;
-  psdCriteria.psdLength = 0;
+  passText.psdLength = 0;
   result = "";
 
   while (passwordLength < 8 || passwordLength > 128) {
@@ -65,7 +65,7 @@ function generatePassword() {
           showPrompts();
 
         
-          while (psdCriteria.psdLength < passwordLength) {
+          while (passText.psdLength < passwordLength) {
              
             if (lowerCase === false && upperCase === false && numbers === false && specialChar === false) {
               alert("You must complete one of the criteria of lowercase, uppercase, numbers or special characters")
@@ -73,28 +73,28 @@ function generatePassword() {
             }
             else {
              
-              if (lowerCase === true && psdCriteria.psdLength < passwordLength) {
-                var lc = psdCriteria.psdLower[Math.floor(Math.random() * 26)]
+              if (lowerCase === true && passText.psdLength < passwordLength) {
+                var lc = passText.psdLower[Math.floor(Math.random() * 26)]
                 result = result + lc;
-                psdCriteria.psdLength++;
+                passText.psdLength++;
               }
         
-              if (specialChar === true && psdCriteria.psdLength < passwordLength) {
-                var sc = psdCriteria.psdChar[Math.floor(Math.random() * 32)]
+              if (specialChar === true && passText.psdLength < passwordLength) {
+                var sc = passText.psdChar[Math.floor(Math.random() * 32)]
                 result = result + sc;
-                psdCriteria.psdLength++;
+                passText.psdLength++;
               }
  
-              if (upperCase === true && psdCriteria.psdLength < passwordLength) {
-                var uc = psdCriteria.psdUpper[Math.floor(Math.random() * 26)]
+              if (upperCase === true && passText.psdLength < passwordLength) {
+                var uc = passText.psdUpper[Math.floor(Math.random() * 26)]
                 result = result + uc;
-                psdCriteria.psdLength++;
+                passText.psdLength++;
               }
 
-              if (numbers === true && psdCriteria.psdLength < passwordLength) {
-                var num = psdCriteria.psdNumb[Math.floor(Math.random() * 10)]
+              if (numbers === true && passText.psdLength < passwordLength) {
+                var num = passText.psdNumb[Math.floor(Math.random() * 10)]
                 result = result + num;
-                psdCriteria.psdLength++;
+                passText.psdLength++;
               }
             }
           }
