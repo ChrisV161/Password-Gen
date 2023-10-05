@@ -1,5 +1,5 @@
 # Password-Gen
-Challenge 3 KU
+Challenge 3 KU - Project Created by: Christopher Villegas
 
 ## sources I used to create this project 
 
